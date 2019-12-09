@@ -76,7 +76,7 @@ def getdate():
             else:    
                 print(s)
                 return s
-        
+        print("ok")
 
 if __name__ == '__main__':
     app.run(threaded=True)        
