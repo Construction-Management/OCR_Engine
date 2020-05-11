@@ -11,7 +11,7 @@ pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesserac
 img=cv2.imread(r'C:\Users\KIIT\OCR DATA\img1.jpg')
 #extraction information from image like top,left,width,heigth,confidence,text
 output_dict=pytesseract.image_to_data(img,output_type=Output.DICT)
-print(output_dict)
+#print(output_dict)
 #regex for dates
 date_pattern='^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[012])-(19|20)\d\d$'
 order_id_pattern='(OD\d+)'
@@ -33,11 +33,11 @@ for i in range(boxes):
             d.append(output_dict['text'][i])
         #else:
            # print('not')
-cv2.imshow('img',img)
-cv2.waitKey(0)
+#cv2.imshow('img',img)
+#cv2.waitKey(0)
 print("Order ID: "+l[0])
 print("Order Date: "+l[1])
 print("Invoice Date: "+l[2])
 print("Total Amount: "+d[-1])
-print(l)
-print(d)
+#print(l)
+#print(d)
